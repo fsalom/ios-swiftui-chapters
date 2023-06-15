@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RickAndMortyDataSourceProtocol {
+protocol RMCharacterDataSourceProtocol {
     func getPagination(for page: Int) async throws -> Pagination?
     func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination?
 }

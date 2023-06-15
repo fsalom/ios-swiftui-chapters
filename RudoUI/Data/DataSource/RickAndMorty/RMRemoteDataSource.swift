@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RickAndMortyRemoteDataSource: RickAndMortyDataSourceProtocol {
+class RMRemoteDataSource: RMCharacterDataSourceProtocol {
     var networkManager: NetworkManagerProtocol
 
     init(networkManager: NetworkManagerProtocol) {

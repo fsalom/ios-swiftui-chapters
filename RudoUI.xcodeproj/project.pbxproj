@@ -16,13 +16,14 @@
 		C1D6C7412A3B584900780F56 /* RudoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7402A3B584900780F56 /* RudoUITests.swift */; };
 		C1D6C74B2A3B584900780F56 /* RudoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */; };
 		C1D6C74D2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */; };
-		C1D6C7632A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7622A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift */; };
+		C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */; };
 		C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7652A3B597E00780F56 /* RMCharacter.swift */; };
-		C1D6C7682A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7672A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift */; };
+		C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */; };
 		C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */; };
 		C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */; };
 		C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */; };
 		C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */; };
+		C1D6C7752A3B697400780F56 /* RickAndMortyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7742A3B697400780F56 /* RickAndMortyRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +56,14 @@
 		C1D6C7462A3B584900780F56 /* RudoUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudoUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITests.swift; sourceTree = "<group>"; };
 		C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C1D6C7622A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDataSourceProtocol.swift; sourceTree = "<group>"; };
+		C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
 		C1D6C7652A3B597E00780F56 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
-		C1D6C7672A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyRemoteDataSource.swift; sourceTree = "<group>"; };
+		C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRemoteDataSource.swift; sourceTree = "<group>"; };
 		C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDTO.swift; sourceTree = "<group>"; };
 		C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
+		C1D6C7742A3B697400780F56 /* RickAndMortyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,8 @@
 		C1D6C75A2A3B58B700780F56 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C76E2A3B5AAB00780F56 /* DTO */,
+				C1D6C7732A3B694700780F56 /* Repositories */,
+				C1D6C76E2A3B5AAB00780F56 /* DTOs */,
 				C1D6C75F2A3B58ED00780F56 /* DataSource */,
 				C1D6C75E2A3B58E200780F56 /* CoreData */,
 			);
@@ -218,8 +221,8 @@
 		C1D6C7612A3B590500780F56 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7622A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift */,
-				C1D6C7672A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift */,
+				C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */,
+				C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -241,13 +244,21 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		C1D6C76E2A3B5AAB00780F56 /* DTO */ = {
+		C1D6C76E2A3B5AAB00780F56 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
 				C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */,
 				C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */,
 			);
-			path = DTO;
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		C1D6C7732A3B694700780F56 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7742A3B697400780F56 /* RickAndMortyRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,15 +392,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */,
-				C1D6C7682A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift in Sources */,
+				C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */,
 				C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */,
 				C1D6C7342A3B584800780F56 /* Persistence.swift in Sources */,
 				C1D6C72D2A3B584700780F56 /* ContentView.swift in Sources */,
 				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
 				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
-				C1D6C7632A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift in Sources */,
+				C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */,
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
+				C1D6C7752A3B697400780F56 /* RickAndMortyRepository.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
