@@ -23,7 +23,8 @@
 		C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */; };
 		C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */; };
 		C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */; };
-		C1D6C7752A3B697400780F56 /* RickAndMortyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7742A3B697400780F56 /* RickAndMortyRepository.swift */; };
+		C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7742A3B697400780F56 /* CharacterRepository.swift */; };
+		C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,8 @@
 		C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDTO.swift; sourceTree = "<group>"; };
 		C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
-		C1D6C7742A3B697400780F56 /* RickAndMortyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyRepository.swift; sourceTree = "<group>"; };
+		C1D6C7742A3B697400780F56 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
+		C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,9 +163,9 @@
 		C1D6C75A2A3B58B700780F56 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7732A3B694700780F56 /* Repositories */,
 				C1D6C76E2A3B5AAB00780F56 /* DTOs */,
 				C1D6C75F2A3B58ED00780F56 /* DataSource */,
+				C1D6C7732A3B694700780F56 /* Repositories */,
 				C1D6C75E2A3B58E200780F56 /* CoreData */,
 			);
 			path = Data;
@@ -172,6 +174,7 @@
 		C1D6C75B2A3B58C000780F56 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C7762A3B6A4300780F56 /* UseCases */,
 				C1D6C7642A3B596F00780F56 /* Entities */,
 			);
 			path = Domain;
@@ -256,9 +259,17 @@
 		C1D6C7732A3B694700780F56 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7742A3B697400780F56 /* RickAndMortyRepository.swift */,
+				C1D6C7742A3B697400780F56 /* CharacterRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C1D6C7762A3B6A4300780F56 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,9 +410,10 @@
 				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
 				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
+				C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */,
 				C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */,
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
-				C1D6C7752A3B697400780F56 /* RickAndMortyRepository.swift in Sources */,
+				C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
