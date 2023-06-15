@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1D6C72B2A3B584700780F56 /* RudoUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72A2A3B584700780F56 /* RudoUIApp.swift */; };
+		C1D6C72B2A3B584700780F56 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72A2A3B584700780F56 /* App.swift */; };
 		C1D6C72D2A3B584700780F56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72C2A3B584700780F56 /* ContentView.swift */; };
 		C1D6C72F2A3B584800780F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D6C72E2A3B584800780F56 /* Assets.xcassets */; };
 		C1D6C7322A3B584800780F56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D6C7312A3B584800780F56 /* Preview Assets.xcassets */; };
@@ -16,6 +16,13 @@
 		C1D6C7412A3B584900780F56 /* RudoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7402A3B584900780F56 /* RudoUITests.swift */; };
 		C1D6C74B2A3B584900780F56 /* RudoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */; };
 		C1D6C74D2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */; };
+		C1D6C7632A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7622A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift */; };
+		C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7652A3B597E00780F56 /* RMCharacter.swift */; };
+		C1D6C7682A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7672A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift */; };
+		C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */; };
+		C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */; };
+		C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */; };
+		C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		C1D6C7272A3B584700780F56 /* RudoUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RudoUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1D6C72A2A3B584700780F56 /* RudoUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIApp.swift; sourceTree = "<group>"; };
+		C1D6C72A2A3B584700780F56 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		C1D6C72C2A3B584700780F56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1D6C72E2A3B584800780F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1D6C7312A3B584800780F56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -48,6 +55,13 @@
 		C1D6C7462A3B584900780F56 /* RudoUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudoUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITests.swift; sourceTree = "<group>"; };
 		C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C1D6C7622A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyDataSourceProtocol.swift; sourceTree = "<group>"; };
+		C1D6C7652A3B597E00780F56 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
+		C1D6C7672A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyRemoteDataSource.swift; sourceTree = "<group>"; };
+		C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDTO.swift; sourceTree = "<group>"; };
+		C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +112,12 @@
 		C1D6C7292A3B584700780F56 /* RudoUI */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C72A2A3B584700780F56 /* RudoUIApp.swift */,
+				C1D6C7692A3B5A3200780F56 /* Manager */,
+				C1D6C75B2A3B58C000780F56 /* Domain */,
+				C1D6C75A2A3B58B700780F56 /* Data */,
+				C1D6C75C2A3B58C500780F56 /* Presentation */,
+				C1D6C7592A3B58AA00780F56 /* Resources */,
 				C1D6C72C2A3B584700780F56 /* ContentView.swift */,
-				C1D6C72E2A3B584800780F56 /* Assets.xcassets */,
-				C1D6C7332A3B584800780F56 /* Persistence.swift */,
-				C1D6C7352A3B584800780F56 /* RudoUI.xcdatamodeld */,
 				C1D6C7302A3B584800780F56 /* Preview Content */,
 			);
 			path = RudoUI;
@@ -131,6 +146,108 @@
 				C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */,
 			);
 			path = RudoUIUITests;
+			sourceTree = "<group>";
+		};
+		C1D6C7592A3B58AA00780F56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C72E2A3B584800780F56 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C1D6C75A2A3B58B700780F56 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C76E2A3B5AAB00780F56 /* DTO */,
+				C1D6C75F2A3B58ED00780F56 /* DataSource */,
+				C1D6C75E2A3B58E200780F56 /* CoreData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C1D6C75B2A3B58C000780F56 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7642A3B596F00780F56 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C1D6C75C2A3B58C500780F56 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C75D2A3B58CD00780F56 /* App */,
+				C1D6C7602A3B58F600780F56 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C1D6C75D2A3B58CD00780F56 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C72A2A3B584700780F56 /* App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C1D6C75E2A3B58E200780F56 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7332A3B584800780F56 /* Persistence.swift */,
+				C1D6C7352A3B584800780F56 /* RudoUI.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C1D6C75F2A3B58ED00780F56 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7612A3B590500780F56 /* RickAndMorty */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C1D6C7602A3B58F600780F56 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C1D6C7612A3B590500780F56 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7622A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift */,
+				C1D6C7672A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
+		C1D6C7642A3B596F00780F56 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7652A3B597E00780F56 /* RMCharacter.swift */,
+				C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		C1D6C7692A3B5A3200780F56 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C1D6C76E2A3B5AAB00780F56 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */,
+				C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +380,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */,
+				C1D6C7682A3B59A900780F56 /* RickAndMortyRemoteDataSource.swift in Sources */,
+				C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */,
 				C1D6C7342A3B584800780F56 /* Persistence.swift in Sources */,
 				C1D6C72D2A3B584700780F56 /* ContentView.swift in Sources */,
-				C1D6C72B2A3B584700780F56 /* RudoUIApp.swift in Sources */,
+				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
+				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
+				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
+				C1D6C7632A3B593D00780F56 /* RickAndMortyDataSourceProtocol.swift in Sources */,
+				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
