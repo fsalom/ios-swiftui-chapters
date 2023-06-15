@@ -25,6 +25,10 @@
 		C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */; };
 		C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7742A3B697400780F56 /* CharacterRepository.swift */; };
 		C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */; };
+		C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C77A2A3B8F9E00780F56 /* ListView.swift */; };
+		C1D6C77D2A3B8FA900780F56 /* ListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C77C2A3B8FA900780F56 /* ListBuilder.swift */; };
+		C1D6C77F2A3B8FC200780F56 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C77E2A3B8FC200780F56 /* ListViewModel.swift */; };
+		C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7802A3B8FFA00780F56 /* ListProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
 		C1D6C7742A3B697400780F56 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
 		C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCase.swift; sourceTree = "<group>"; };
+		C1D6C77A2A3B8F9E00780F56 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C1D6C77C2A3B8FA900780F56 /* ListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBuilder.swift; sourceTree = "<group>"; };
+		C1D6C77E2A3B8FC200780F56 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C1D6C7802A3B8FFA00780F56 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +225,7 @@
 		C1D6C7602A3B58F600780F56 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C7792A3B8F9000780F56 /* List */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -270,6 +279,17 @@
 				C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		C1D6C7792A3B8F9000780F56 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C77A2A3B8F9E00780F56 /* ListView.swift */,
+				C1D6C77C2A3B8FA900780F56 /* ListBuilder.swift */,
+				C1D6C77E2A3B8FC200780F56 /* ListViewModel.swift */,
+				C1D6C7802A3B8FFA00780F56 /* ListProtocols.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,16 +423,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */,
+				C1D6C77D2A3B8FA900780F56 /* ListBuilder.swift in Sources */,
 				C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */,
 				C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */,
 				C1D6C7342A3B584800780F56 /* Persistence.swift in Sources */,
 				C1D6C72D2A3B584700780F56 /* ContentView.swift in Sources */,
+				C1D6C77F2A3B8FC200780F56 /* ListViewModel.swift in Sources */,
 				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
 				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
 				C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */,
 				C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */,
+				C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */,
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
+				C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */,
 				C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 			);
