@@ -11,7 +11,19 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
     @ObservedObject var viewModel: VM
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            NavigationStack {
+                ScrollView {
+                    ForEach(viewModel.characters) { character in
+                        NavigationLink(destination:  DetailCharacterBuilder.build(with: character)) {
+                            CharacterRow(character: character)
+                                .padding(.trailing, 20)
+                                .padding(.leading, 20)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

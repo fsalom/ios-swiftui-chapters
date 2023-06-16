@@ -13,7 +13,7 @@ struct RudoUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListBuilder().build()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
