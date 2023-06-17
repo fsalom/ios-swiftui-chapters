@@ -23,7 +23,9 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                     }
                 }
             }
-        }
+        }.onAppear {
+            viewModel.load()
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

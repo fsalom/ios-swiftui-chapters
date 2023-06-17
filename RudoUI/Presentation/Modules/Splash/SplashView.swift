@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct SplashView: View {
-
     @State var isActive: Bool = false
 
     var body: some View {
         ZStack {
-            Color.init("backgroundColor")
+            Color.init(Resources.Colors.background.rawValue)
             if self.isActive {
                 ListBuilder().build()
             } else {
-                Image("logo")
+                Image(Resources.Images.logo.rawValue)
                     .scaledToFit()
                     .frame(width: 300, height: 150)
                 }

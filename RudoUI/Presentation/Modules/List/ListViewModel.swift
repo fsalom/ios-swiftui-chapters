@@ -26,7 +26,11 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
 
     func load() {
         Task {
-            (characters, hasNextPage) = try await useCase.getCharactersAndNextPage(for: page)
+            let (characters, hasNextPage) = try await useCase.getCharactersAndNextPage(for: page)
+            await MainActor.run {
+                self.characters = characters
+                self.hasNextPage = hasNextPage
+            }
         }
     }
 }
