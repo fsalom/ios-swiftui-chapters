@@ -36,7 +36,6 @@
 		C1D6C78D2A3C7D8100780F56 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C78C2A3C7D8000780F56 /* CharacterRow.swift */; };
 		C1D6C7902A3C7FB400780F56 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C78F2A3C7FB400780F56 /* SplashView.swift */; };
 		C1D6C7972A3E420700780F56 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7962A3E420700780F56 /* Resources.swift */; };
-		C1D6C79A2A3E61D900780F56 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7992A3E61D900780F56 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +88,6 @@
 		C1D6C78C2A3C7D8000780F56 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 		C1D6C78F2A3C7FB400780F56 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C1D6C7962A3E420700780F56 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		C1D6C7992A3E61D900780F56 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +138,6 @@
 		C1D6C7292A3B584700780F56 /* RudoUI */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7982A3E61CC00780F56 /* Extension */,
 				C1D6C7912A3E3D6900780F56 /* Constants */,
 				C1D6C7692A3B5A3200780F56 /* Manager */,
 				C1D6C75B2A3B58C000780F56 /* Domain */,
@@ -348,14 +345,6 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		C1D6C7982A3E61CC00780F56 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				C1D6C7992A3E61D900780F56 /* View.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -508,7 +497,6 @@
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
 				C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */,
 				C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */,
-				C1D6C79A2A3E61D900780F56 /* View.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 				C1D6C7972A3E420700780F56 /* Resources.swift in Sources */,
 			);
