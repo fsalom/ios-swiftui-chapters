@@ -3,7 +3,7 @@
 //  RudoUI
 //
 //  Created by Fernando Salom Carratala on 15/6/23.
-//
+//  
 
 import SwiftUI
 
@@ -13,7 +13,7 @@ struct RudoUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ListBuilder().build()
+            SplashView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

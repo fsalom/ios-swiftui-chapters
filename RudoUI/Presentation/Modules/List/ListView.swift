@@ -15,7 +15,7 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
             NavigationStack {
                 ScrollView {
                     ForEach(viewModel.characters) { character in
-                        NavigationLink(destination:  DetailCharacterBuilder.build(with: character)) {
+                        NavigationLink(destination:  DetailCharacterBuilder().build(with: character)) {
                             CharacterRow(character: character)
                                 .padding(.trailing, 20)
                                 .padding(.leading, 20)

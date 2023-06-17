@@ -1,6 +1,7 @@
 import Foundation
 
-struct RMCharacter {
+struct RMCharacter: Identifiable {
+    var id: String = UUID().uuidString
     var image: String
     var name: String
     var status: String
