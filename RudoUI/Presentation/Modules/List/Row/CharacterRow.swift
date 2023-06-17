@@ -22,8 +22,11 @@ struct CharacterRow: View {
                             .clipShape(Circle())
                     } placeholder: {
                         Image(systemName: "photo")
-                            .frame(width: 80, height: 80, alignment: .top)
+                            .frame(width: 80, height: 80, alignment: .center)
+                            .foregroundColor(.white)
+                            .background(.gray)
                             .clipShape(Circle())
+
                     }
                 }
                 Circle()
