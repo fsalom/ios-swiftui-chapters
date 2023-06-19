@@ -1,7 +1,7 @@
 # Bienvenidos a SwiftUI
 
-## Capítulo 1 | Nivel iniciación
+## Capítulo 2 | Practicando con datos
 
-En este capítulo vamos a crear una pantalla que hará de splash en nuestra aplicación y tendrá el siguiente diseño
+En este capítulo vamos a ponernos manos a la obra, vamos a realizar una lista de personajes de rick y morty utilizando la arquitectura MVVM clean. El objetivo es crear un diseño igual que el mostrado a continuación. Se provee un proyecto que tiene creadas gran parte de la lógica necesaria.
 
-![Splash screen](../README/screen1.png)
+![Rick and morty list](../README/screen2.png)
