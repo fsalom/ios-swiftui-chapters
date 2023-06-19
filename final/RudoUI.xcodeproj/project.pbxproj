@@ -15,10 +15,24 @@
 		C1D6C7412A3B584900780F56 /* RudoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7402A3B584900780F56 /* RudoUITests.swift */; };
 		C1D6C74B2A3B584900780F56 /* RudoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */; };
 		C1D6C74D2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */; };
+		C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */; };
+		C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7652A3B597E00780F56 /* RMCharacter.swift */; };
+		C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */; };
+		C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */; };
+		C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */; };
+		C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */; };
+		C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */; };
+		C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7742A3B697400780F56 /* CharacterRepository.swift */; };
+		C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */; };
 		C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C77A2A3B8F9E00780F56 /* ListView.swift */; };
 		C1D6C77D2A3B8FA900780F56 /* ListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C77C2A3B8FA900780F56 /* ListBuilder.swift */; };
 		C1D6C77F2A3B8FC200780F56 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C77E2A3B8FC200780F56 /* ListViewModel.swift */; };
 		C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7802A3B8FFA00780F56 /* ListProtocols.swift */; };
+		C1D6C7842A3C7C1400780F56 /* DetailCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7832A3C7C1400780F56 /* DetailCharacterView.swift */; };
+		C1D6C7862A3C7C2800780F56 /* DetailCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7852A3C7C2800780F56 /* DetailCharacterViewModel.swift */; };
+		C1D6C7882A3C7C3900780F56 /* DetailCharacterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7872A3C7C3900780F56 /* DetailCharacterProtocols.swift */; };
+		C1D6C78A2A3C7C4900780F56 /* DetailCharacterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7892A3C7C4900780F56 /* DetailCharacterBuilder.swift */; };
+		C1D6C78D2A3C7D8100780F56 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C78C2A3C7D8000780F56 /* CharacterRow.swift */; };
 		C1D6C7902A3C7FB400780F56 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C78F2A3C7FB400780F56 /* SplashView.swift */; };
 		C1D6C7972A3E420700780F56 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7962A3E420700780F56 /* Resources.swift */; };
 /* End PBXBuildFile section */
@@ -52,10 +66,24 @@
 		C1D6C7462A3B584900780F56 /* RudoUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudoUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITests.swift; sourceTree = "<group>"; };
 		C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
+		C1D6C7652A3B597E00780F56 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
+		C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRemoteDataSource.swift; sourceTree = "<group>"; };
+		C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDTO.swift; sourceTree = "<group>"; };
+		C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
+		C1D6C7742A3B697400780F56 /* CharacterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepository.swift; sourceTree = "<group>"; };
+		C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUseCase.swift; sourceTree = "<group>"; };
 		C1D6C77A2A3B8F9E00780F56 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		C1D6C77C2A3B8FA900780F56 /* ListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBuilder.swift; sourceTree = "<group>"; };
 		C1D6C77E2A3B8FC200780F56 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C1D6C7802A3B8FFA00780F56 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
+		C1D6C7832A3C7C1400780F56 /* DetailCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterView.swift; sourceTree = "<group>"; };
+		C1D6C7852A3C7C2800780F56 /* DetailCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterViewModel.swift; sourceTree = "<group>"; };
+		C1D6C7872A3C7C3900780F56 /* DetailCharacterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterProtocols.swift; sourceTree = "<group>"; };
+		C1D6C7892A3C7C4900780F56 /* DetailCharacterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterBuilder.swift; sourceTree = "<group>"; };
+		C1D6C78C2A3C7D8000780F56 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 		C1D6C78F2A3C7FB400780F56 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C1D6C7962A3E420700780F56 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,8 +138,8 @@
 			children = (
 				C1D6C7912A3E3D6900780F56 /* Constants */,
 				C1D6C7692A3B5A3200780F56 /* Manager */,
-				C1D6C75A2A3B58B700780F56 /* Data */,
 				C1D6C75B2A3B58C000780F56 /* Domain */,
+				C1D6C75A2A3B58B700780F56 /* Data */,
 				C1D6C75C2A3B58C500780F56 /* Presentation */,
 				C1D6C7592A3B58AA00780F56 /* Resources */,
 				C1D6C7302A3B584800780F56 /* Preview Content */,
@@ -157,6 +185,7 @@
 			children = (
 				C1D6C76E2A3B5AAB00780F56 /* DTOs */,
 				C1D6C75F2A3B58ED00780F56 /* DataSource */,
+				C1D6C7732A3B694700780F56 /* Repositories */,
 				C1D6C75E2A3B58E200780F56 /* CoreData */,
 			);
 			path = Data;
@@ -200,6 +229,7 @@
 		C1D6C75F2A3B58ED00780F56 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C7612A3B590500780F56 /* RickAndMorty */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -208,14 +238,26 @@
 			isa = PBXGroup;
 			children = (
 				C1D6C78E2A3C7FA500780F56 /* Splash */,
+				C1D6C7822A3C7BFD00780F56 /* Detail */,
 				C1D6C7792A3B8F9000780F56 /* List */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		C1D6C7612A3B590500780F56 /* RickAndMorty */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */,
+				C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */,
+			);
+			path = RickAndMorty;
+			sourceTree = "<group>";
+		};
 		C1D6C7642A3B596F00780F56 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C7652A3B597E00780F56 /* RMCharacter.swift */,
+				C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -223,6 +265,7 @@
 		C1D6C7692A3B5A3200780F56 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -230,13 +273,24 @@
 		C1D6C76E2A3B5AAB00780F56 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C76F2A3B5AB800780F56 /* RMCharacterDTO.swift */,
+				C1D6C7712A3B5AE000780F56 /* PaginationDTO.swift */,
 			);
 			path = DTOs;
+			sourceTree = "<group>";
+		};
+		C1D6C7732A3B694700780F56 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7742A3B697400780F56 /* CharacterRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		C1D6C7762A3B6A4300780F56 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C7772A3B6A5400780F56 /* CharacterUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -253,9 +307,21 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		C1D6C7822A3C7BFD00780F56 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7892A3C7C4900780F56 /* DetailCharacterBuilder.swift */,
+				C1D6C7832A3C7C1400780F56 /* DetailCharacterView.swift */,
+				C1D6C7852A3C7C2800780F56 /* DetailCharacterViewModel.swift */,
+				C1D6C7872A3C7C3900780F56 /* DetailCharacterProtocols.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		C1D6C78B2A3C7D6900780F56 /* Row */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C78C2A3C7D8000780F56 /* CharacterRow.swift */,
 			);
 			path = Row;
 			sourceTree = "<group>";
@@ -406,13 +472,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D6C78D2A3C7D8100780F56 /* CharacterRow.swift in Sources */,
+				C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */,
 				C1D6C77D2A3B8FA900780F56 /* ListBuilder.swift in Sources */,
+				C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */,
+				C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */,
 				C1D6C7342A3B584800780F56 /* Persistence.swift in Sources */,
+				C1D6C7882A3C7C3900780F56 /* DetailCharacterProtocols.swift in Sources */,
 				C1D6C77F2A3B8FC200780F56 /* ListViewModel.swift in Sources */,
+				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
+				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
+				C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */,
+				C1D6C7842A3C7C1400780F56 /* DetailCharacterView.swift in Sources */,
+				C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */,
+				C1D6C78A2A3C7C4900780F56 /* DetailCharacterBuilder.swift in Sources */,
 				C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */,
 				C1D6C7902A3C7FB400780F56 /* SplashView.swift in Sources */,
+				C1D6C7862A3C7C2800780F56 /* DetailCharacterViewModel.swift in Sources */,
+				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
 				C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */,
+				C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 				C1D6C7972A3E420700780F56 /* Resources.swift in Sources */,
 			);

@@ -1,3 +1,10 @@
+//
+//  SplashView.swift
+//  RudoUI
+//
+//  Created by Fernando Salom Carratala on 16/6/23.
+//
+
 import SwiftUI
 
 struct SplashView: View {
