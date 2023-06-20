@@ -9,9 +9,46 @@ import SwiftUI
 
 struct DetailCharacterView<VM>: View where VM: DetailCharacterViewModelProtocol {
     @ObservedObject var viewModel: VM
-
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if let url = URL(string: viewModel.character.image) {
+                AsyncImage(url: url) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                } placeholder: {
+                    ProgressView()
+                }
+            }
+            Spacer()
+            if viewModel.errorOccurred {
+                HStack {
+                    Text("Error")
+                }.padding(16)
+                    .frame(maxWidth: .infinity, idealHeight: 80)
+                    .background(.red)
+            } else {
+                VStack(alignment: .leading) {
+                    Text("Personajes relacionados")
+                        .padding(16)
+                        .fontWeight(.bold)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(viewModel.relatedCharacters) { character in
+                                NavigationLink(destination:  DetailCharacterBuilder().build(with: character)) {
+                                    RelatedCharacterRow(character: character)
+                                }
+                            }
+                        }.padding(16)
+                    }.frame(maxWidth: .infinity, idealHeight: 80)
+                        .task {
+                            await viewModel.getRelatedCharacters()
+                        }
+                }
+
+            }
+        }.navigationTitle(viewModel.character.name)
     }
 }
 
