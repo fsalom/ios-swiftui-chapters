@@ -43,7 +43,6 @@ struct CharacterRow: View {
 
             Spacer()
         }.frame(maxWidth: .infinity)
-            .navigationTitle("Lista de personajes")
     }
 
     func getStatusColor(for status: RMCharacter.RMStatus) -> Color {
