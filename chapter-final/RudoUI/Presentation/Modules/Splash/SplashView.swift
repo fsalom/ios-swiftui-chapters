@@ -11,22 +11,22 @@ struct SplashView: View {
     @State var isActive: Bool = false
 
     var body: some View {
-        ZStack {
-            Color.init(Resources.Colors.background.rawValue)
-            if self.isActive {
-                ListBuilder().build()
-            } else {
+        if self.isActive {
+            ListBuilder().build()
+        } else {
+            ZStack {
+                Color.init(Resources.Colors.background.rawValue)
                 Image(Resources.Images.logo.rawValue)
                     .scaledToFit()
                     .frame(width: 300, height: 150)
+            }.onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    withAnimation {
+                        self.isActive = true
+                    }
                 }
-        }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                withAnimation {
-                    self.isActive = true
-                }
-            }
-        }.edgesIgnoringSafeArea(.all)
+            }.edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
