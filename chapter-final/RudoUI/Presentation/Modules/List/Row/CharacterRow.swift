@@ -20,8 +20,9 @@ struct CharacterRow: View {
                             .frame(width: 80, height: 80, alignment: .top)
                             .aspectRatio(contentMode: .fill)
                             .clipShape(Circle())
+                            .transition(.scale(scale: 0.1, anchor: .center))
                     } placeholder: {
-                        Image(systemName: "photo")
+                        ProgressView()
                             .frame(width: 80, height: 80, alignment: .center)
                             .foregroundColor(.white)
                             .background(.gray)
