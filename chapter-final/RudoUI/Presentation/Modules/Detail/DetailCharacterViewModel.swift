@@ -17,15 +17,13 @@ class DetailCharacterViewModel: ObservableObject, DetailCharacterViewModelProtoc
     init(useCase: CharacterUseCaseProtocol, character: RMCharacter) {
         self.useCase = useCase
         self.character = character
-        self.relatedCharacters = relatedCharacters
     }
 
     func getRelatedCharacters() async {
         do {
-            let first_name = character.name.split(separator: " ").first ?? ""
-            let (relatedCharacters, _) = try await useCase.getCharactersAndNextPageWhenSearching(this: String(first_name), for: 1)
+            let relatedCharacters = try await useCase.getCharactersRelatedTo(this: character)
             await MainActor.run {
-                self.relatedCharacters = relatedCharacters.filter { $0.name != character.name }
+                self.relatedCharacters = relatedCharacters
             }
         } catch {
             errorOccurred = true
