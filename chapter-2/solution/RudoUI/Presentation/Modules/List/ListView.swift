@@ -16,11 +16,10 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                 NavigationStack {
                     ScrollView {
                         ForEach(viewModel.characters) { character in
-                            NavigationLink(destination:  DetailCharacterBuilder().build(with: character)) {
-                                CharacterRow(character: character)
-                                    .padding(.trailing, 20)
-                                    .padding(.leading, 20)
-                            }
+                            CharacterRow(character: character)
+                                .padding(.trailing, 20)
+                                .padding(.leading, 20)
+
                         }
                         if viewModel.hasNextPage {
                             Button {
@@ -37,18 +36,6 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
             }.task {
                 await viewModel.load()
             }.edgesIgnoringSafeArea(.all)
-
-            VStack {
-                Text("\(viewModel.characters.count)").font(.headline).fontWeight(.black)
-                    .foregroundColor(.white)
-                Text("Personajes").font(.footnote)
-                    .foregroundColor(.white)
-            }
-            .frame(width: 90, height: 50)
-            .padding(10)
-            .background(.black)
-            .cornerRadius(10)
-            .position(x: UIScreen.main.bounds.width - 40, y: 200)
         }
     }
 }

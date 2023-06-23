@@ -19,7 +19,6 @@ struct SplashView: View {
                 Image(Resources.Images.logo.rawValue)
                     .scaledToFit()
                     .frame(width: 300, height: 150)
-
             }.onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     withAnimation {
