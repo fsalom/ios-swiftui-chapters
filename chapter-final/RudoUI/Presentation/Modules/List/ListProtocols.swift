@@ -8,8 +8,9 @@
 import Foundation
 
 protocol ListViewModelProtocol: ObservableObject  {
+    var searchText: String { get set }
     var characters: [RMCharacter] { get set }
-    var hasNextPage: Bool { get set }
+    var hasMoreCharactersPendingToLoad: Bool { get set }
     func load() async
     func loadMoreIfNeeded()
 }

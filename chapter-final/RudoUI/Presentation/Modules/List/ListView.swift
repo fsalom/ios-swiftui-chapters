@@ -31,7 +31,7 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                                 .padding(.leading, 20)
                         }
                     }
-                    if viewModel.hasNextPage {
+                    if viewModel.hasMoreCharactersPendingToLoad {
                         Button {
                             viewModel.loadMoreIfNeeded()
                         } label: {
@@ -41,7 +41,7 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                         .background(Color.black)
                         .foregroundColor(.white)
                     }
-                }
+                }.searchable(text: $viewModel.searchText)
             }
         }.task {
             await viewModel.load()

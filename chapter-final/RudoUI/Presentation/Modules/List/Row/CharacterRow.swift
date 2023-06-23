@@ -40,8 +40,7 @@ struct CharacterRow: View {
                 Text(character.name).font(.headline).foregroundColor(.black)
                 Text(character.gender).font(.subheadline).foregroundColor(.black)
                 Text(character.species).font(.subheadline).foregroundColor(.black)
-            }
-
+            }            
             Spacer()
         }.frame(maxWidth: .infinity)
     }
