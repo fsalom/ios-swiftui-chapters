@@ -105,6 +105,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
 
     func resetListWithPreviousCharacters() {
         if !originalCharacters.isEmpty {
+            self.hasMoreCharactersPendingToLoad = self.hasNextPage
             self.characters = self.originalCharacters
             self.page = self.originalPage
             self.originalCharacters.removeAll()
