@@ -13,15 +13,13 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
     var body: some View {
         VStack {
             NavigationStack {
-                VStack {
-                    Text("\(viewModel.characters.count)").font(.headline).fontWeight(.black)
-                        .foregroundColor(.black)
-                    Text("Personajes").font(.footnote)
-                        .foregroundColor(.black)
-                }
-                .frame(maxWidth: .infinity, minHeight: 44)
-                .padding(10)
-                .background(Color(Resources.Colors.background.rawValue))
+                VStack(alignment: .trailing) {
+                    Text("\(viewModel.characters.count) \(String.General.characters.localized)")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                }.frame(maxWidth: .infinity)
 
                 ScrollView {
                     ForEach(viewModel.characters) { character in
@@ -35,19 +33,20 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                         Button {
                             viewModel.loadMoreIfNeeded()
                         } label: {
-                            Text("Cargar más")
+                            Text(String.List.loadMore.localized)
                         }
                         .frame(maxWidth: .infinity, minHeight: 44)
                         .background(Color.black)
                         .foregroundColor(.white)
                     }
-                }.searchable(text: $viewModel.searchText)
+                }.navigationTitle(String.List.characters.localized)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .accentColor(.black)
+                    .searchable(text: $viewModel.searchText, prompt: String.List.search.localized)
             }
         }.task {
             await viewModel.load()
-        }.edgesIgnoringSafeArea(.all)
-            .navigationTitle("Lista de personajes")
-            .accentColor(.black)
+        }
     }
 }
 

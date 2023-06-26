@@ -24,18 +24,18 @@ struct DetailCharacterView<VM>: View where VM: DetailCharacterViewModelProtocol 
             Spacer()
             if viewModel.errorOccurred {
                 HStack {
-                    Text("Error")
+                    Text(String.Detail.error.localized)
                 }.padding(16)
                     .frame(maxWidth: .infinity, idealHeight: 80)
                     .background(.red)
             } else {
                 VStack(alignment: .leading) {
-                    Text("Personajes relacionados")
+                    Text(String.Detail.relatedCharacters.localized)
                         .frame(maxWidth: .infinity)
                         .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
                         .fontWeight(.bold)
                     if viewModel.relatedCharacters.count == 0 {
-                        Text("No se han encontrado relacionados")
+                        Text(String.Detail.relatedCharactersNotFound.localized)
                             .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
                             .frame(maxWidth: .infinity)
                     } else {
@@ -56,9 +56,9 @@ struct DetailCharacterView<VM>: View where VM: DetailCharacterViewModelProtocol 
 
             }
         }.navigationTitle(viewModel.character.name)
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing:
-                            Button(action: {
-                                // Acción del botón
+                            Button(action: {                              
                             }) {
                                 Image(systemName: "circle.fill")
                                     .foregroundColor(getStatusColor(for: viewModel.character.status))
