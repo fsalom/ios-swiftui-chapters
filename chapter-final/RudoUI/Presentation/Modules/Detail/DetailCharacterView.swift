@@ -58,13 +58,10 @@ struct DetailCharacterView<VM>: View where VM: DetailCharacterViewModelProtocol 
         }.navigationTitle(viewModel.character.name)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing:
-                            Button(action: {                              
-                            }) {
-                                Image(systemName: "circle.fill")
-                                    .foregroundColor(getStatusColor(for: viewModel.character.status))
-                                    .frame(width: 24, height: 24)
-                            }
-                        )
+            Image(systemName: "circle.fill")
+                .foregroundColor(getStatusColor(for: viewModel.character.status))
+                .frame(width: 24, height: 24)
+            )
     }
 
     func getStatusColor(for status: RMCharacter.RMStatus) -> Color {

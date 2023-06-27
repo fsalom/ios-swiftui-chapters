@@ -13,14 +13,6 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
     var body: some View {
         VStack {
             NavigationStack {
-                VStack(alignment: .trailing) {
-                    Text("\(viewModel.characters.count) \(String.General.characters.localized)")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                }.frame(maxWidth: .infinity)
-
                 ScrollView {
                     ForEach(viewModel.characters) { character in
                         NavigationLink(destination:  DetailCharacterBuilder().build(with: character)) {
@@ -43,6 +35,13 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                     .navigationBarTitleDisplayMode(.inline)
                     .accentColor(.black)
                     .searchable(text: $viewModel.searchText, prompt: String.List.search.localized)
+                    .navigationBarItems(trailing:
+
+                                        Text("\(viewModel.characters.count) \(String.General.characters.localized)")
+                                            .font(.footnote)
+                                            .foregroundColor(.gray)
+
+                                )
             }
         }.task {
             await viewModel.load()
