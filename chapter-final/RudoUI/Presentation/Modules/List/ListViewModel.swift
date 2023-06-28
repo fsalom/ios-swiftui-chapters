@@ -85,6 +85,16 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         }
     }
 
+    func addOrRemove(this character: RMCharacter) {
+        Task {
+            if character.isFavorite {
+                try await self.useCase.saveFavorite(character)
+            } else {
+                try await self.useCase.removeFavorite(character)
+            }
+        }
+    }
+
     func search(this text: String) {
         Task {
             if searchHasNextPage {

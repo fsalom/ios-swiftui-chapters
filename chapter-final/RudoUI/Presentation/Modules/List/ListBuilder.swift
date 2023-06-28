@@ -10,9 +10,9 @@ import Foundation
 class ListBuilder {
     func build() -> ListView<ListViewModel> {
         let networkDataSource = RMRemoteDataSource(networkManager: NetworkManager())
+        let cacheDataSource = RMCacheDataSource(localManager: CacheManager())
         let repository = CharacterRepository(networkDatasource: networkDataSource,
-                                             localDatasource: networkDataSource,
-                                             cacheManager: networkDataSource)
+                                             cacheDatasource: cacheDataSource)
         let useCase = CharacterUseCase(repository: repository)
 
         let viewModel = ListViewModel(useCase: useCase)

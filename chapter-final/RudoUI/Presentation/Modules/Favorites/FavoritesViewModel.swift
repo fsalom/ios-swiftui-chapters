@@ -19,7 +19,10 @@ class FavoritesViewModel: ObservableObject, FavoritesViewModelProtocol {
 
     func load() async {
         do {
-            
+            let characters = try await useCase.getFavorites()
+            await MainActor.run() {
+                self.characters = characters                
+            }
         } catch {
             errorOccurred = true
         }
