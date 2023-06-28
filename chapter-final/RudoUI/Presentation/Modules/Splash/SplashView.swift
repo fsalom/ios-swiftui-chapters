@@ -12,7 +12,7 @@ struct SplashView: View {
 
     var body: some View {
         if self.isActive {
-            ListBuilder().build()
+            TabbarView()
         } else {
             ZStack {
                 Color.init(Resources.Colors.background.rawValue)

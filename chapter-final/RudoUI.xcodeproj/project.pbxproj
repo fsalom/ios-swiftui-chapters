@@ -39,6 +39,11 @@
 		C1D6C7972A3E420700780F56 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7962A3E420700780F56 /* Resources.swift */; };
 		C1D6C7B12A40EF6E00780F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1D6C7B02A40EF6D00780F56 /* LaunchScreen.storyboard */; };
 		C1D6C7B42A41999200780F56 /* RelatedCharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7B32A41999200780F56 /* RelatedCharacterRow.swift */; };
+		C1DDF6FB2A4C5D760031BFE7 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF6FA2A4C5D760031BFE7 /* TabbarView.swift */; };
+		C1DDF6FE2A4C5E7C0031BFE7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF6FD2A4C5E7C0031BFE7 /* FavoritesView.swift */; };
+		C1DDF7002A4C5E8C0031BFE7 /* FavoritesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF6FF2A4C5E8C0031BFE7 /* FavoritesBuilder.swift */; };
+		C1DDF7022A4C5E9A0031BFE7 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */; };
+		C1DDF7042A4C5EAA0031BFE7 /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +99,11 @@
 		C1D6C7962A3E420700780F56 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		C1D6C7B02A40EF6D00780F56 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1D6C7B32A41999200780F56 /* RelatedCharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedCharacterRow.swift; sourceTree = "<group>"; };
+		C1DDF6FA2A4C5D760031BFE7 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		C1DDF6FD2A4C5E7C0031BFE7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		C1DDF6FF2A4C5E8C0031BFE7 /* FavoritesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBuilder.swift; sourceTree = "<group>"; };
+		C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +256,8 @@
 		C1D6C7602A3B58F600780F56 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C1DDF6FC2A4C5E620031BFE7 /* Favorites */,
+				C1DDF6F92A4C5D670031BFE7 /* Tabbar */,
 				C1D6C78E2A3C7FA500780F56 /* Splash */,
 				C1D6C7822A3C7BFD00780F56 /* Detail */,
 				C1D6C7792A3B8F9000780F56 /* List */,
@@ -360,6 +372,25 @@
 				C1D6C7B32A41999200780F56 /* RelatedCharacterRow.swift */,
 			);
 			path = Row;
+			sourceTree = "<group>";
+		};
+		C1DDF6F92A4C5D670031BFE7 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C1DDF6FA2A4C5D760031BFE7 /* TabbarView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C1DDF6FC2A4C5E620031BFE7 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				C1DDF6FD2A4C5E7C0031BFE7 /* FavoritesView.swift */,
+				C1DDF6FF2A4C5E8C0031BFE7 /* FavoritesBuilder.swift */,
+				C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */,
+				C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,19 +525,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1DDF7022A4C5E9A0031BFE7 /* FavoritesViewModel.swift in Sources */,
 				C1D6C78D2A3C7D8100780F56 /* CharacterRow.swift in Sources */,
 				C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */,
 				C1D6C7B42A41999200780F56 /* RelatedCharacterRow.swift in Sources */,
 				C1D6C77D2A3B8FA900780F56 /* ListBuilder.swift in Sources */,
+				C1DDF7042A4C5EAA0031BFE7 /* FavoritesProtocols.swift in Sources */,
 				C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */,
 				C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */,
 				C1D6C7342A3B584800780F56 /* Persistence.swift in Sources */,
 				C179CEFD2A49D0C5007BA0FB /* Localizable.swift in Sources */,
+				C1DDF6FE2A4C5E7C0031BFE7 /* FavoritesView.swift in Sources */,
 				C1D6C7882A3C7C3900780F56 /* DetailCharacterProtocols.swift in Sources */,
 				C1D6C77F2A3B8FC200780F56 /* ListViewModel.swift in Sources */,
 				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
+				C1DDF6FB2A4C5D760031BFE7 /* TabbarView.swift in Sources */,
 				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
+				C1DDF7002A4C5E8C0031BFE7 /* FavoritesBuilder.swift in Sources */,
 				C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */,
 				C1D6C7842A3C7C1400780F56 /* DetailCharacterView.swift in Sources */,
 				C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */,
