@@ -37,10 +37,15 @@ extension String {
     enum General: String, Localizable {
         case characters = "characters"
     }
+
     enum List: String, Localizable {
         case characters =  "list_characters"
         case loadMore = "list_load_more"
         case search = "list_search_placeholder"
+    }
+
+    enum Favorites: String, Localizable {
+        case title =  "favorites_title"
     }
 
     enum Detail: String, Localizable {
