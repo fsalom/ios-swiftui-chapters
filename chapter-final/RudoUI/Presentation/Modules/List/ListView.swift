@@ -37,12 +37,15 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
                 }.navigationTitle(String.List.characters.localized)
                     .navigationBarTitleDisplayMode(.inline)
                     .accentColor(.black)
-                    .searchable(text: $viewModel.searchText, prompt: String.List.search.localized)
+                    .searchable(text: $viewModel.searchText,
+                                placement: .navigationBarDrawer(displayMode: .always),
+                                prompt: String.List.search.localized)
                     .navigationBarItems(trailing:
                                             Text("\(viewModel.characters.count) \(String.General.characters.localized)")
                         .font(.footnote)
                         .foregroundColor(.gray)
                     )
+
             }
         }.task {
             await viewModel.load()
