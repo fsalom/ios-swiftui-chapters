@@ -69,7 +69,9 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
 
     func load() async {
         do {
-            try await fetchCharacters()
+            if characters.isEmpty {
+                try await fetchCharacters()
+            }
         } catch {
             hasOcurredAnError = true
         }

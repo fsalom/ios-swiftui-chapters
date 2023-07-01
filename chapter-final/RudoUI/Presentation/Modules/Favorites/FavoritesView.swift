@@ -19,6 +19,9 @@ struct FavoritesView<VM>: View where VM: FavoritesViewModelProtocol {
                             CharacterRow(character: $character)
                                 .padding(.trailing, 20)
                                 .padding(.leading, 20)
+                                .onChange(of: character) { newValue in
+                                    viewModel.addOrRemove(this: newValue)
+                                }
                         }
                     }
                 }.navigationTitle(String.Favorites.title.localized)
