@@ -25,16 +25,6 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         self.hasNextPage = true
     }
 
-    func loadMoreIfNeeded() {
-        Task {
-            do {
-                try await fetchCharacters()
-            } catch {
-                hasOcurredAnError = true
-            }
-        }
-    }
-
     func load() async {
         do {
             try await fetchCharacters()
@@ -44,12 +34,10 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
     }
 
     func fetchCharacters() async throws {
-        if hasNextPage {
-            let (characters, hasNextPage) = try await useCase.getCharactersAndNextPage(for: page)
-            await MainActor.run {
-                self.characters.append(contentsOf: characters)
-                self.hasNextPage = hasNextPage
-            }
+        let (characters, hasNextPage) = try await useCase.getCharactersAndNextPage(for: page)
+        await MainActor.run {
+            self.characters.append(contentsOf: characters)
+            self.hasNextPage = hasNextPage
         }
     }
 }

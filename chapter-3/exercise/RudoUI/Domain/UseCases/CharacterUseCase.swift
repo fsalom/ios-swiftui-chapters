@@ -10,7 +10,7 @@ import Foundation
 protocol CharacterUseCaseProtocol {
     func getCharactersAndNextPage(for page: Int) async throws -> ([RMCharacter], Bool)
     func getCharactersAndNextPageWhenSearching(this name: String, for page: Int) async throws -> ([RMCharacter], Bool)
-    func getCharactersRelatedTo(this character: RMCharacter) async throws -> [RMCharacter]
+
 }
 
 final class CharacterUseCase {
@@ -31,12 +31,5 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
                                                for page: Int) async throws -> ([RMCharacter], Bool) {
         let pagination = try await repository.getPaginationWhenSearching(this: name, for: page)
         return (pagination.characters, pagination.hasNextPage)
-    }
-
-    func getCharactersRelatedTo(this character: RMCharacter) async throws -> [RMCharacter] {
-        let name = character.name.split(separator: " ")
-        guard let first_name = name.first else { return [] }
-        let pagination = try await repository.getPaginationWhenSearching(this: String(first_name), for: 1)
-        return pagination.characters.filter({$0.name != character.name})
     }
 }

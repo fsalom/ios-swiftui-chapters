@@ -11,7 +11,6 @@ protocol ListViewModelProtocol: ObservableObject  {
     var characters: [RMCharacter] { get set }
     var hasNextPage: Bool { get set }
     func load() async
-    func loadMoreIfNeeded()
 }
 
 

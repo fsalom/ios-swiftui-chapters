@@ -13,41 +13,17 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
     var body: some View {
         VStack {
             NavigationStack {
-                VStack {
-                    Text("\(viewModel.characters.count)").font(.headline).fontWeight(.black)
-                        .foregroundColor(.black)
-                    Text("Personajes").font(.footnote)
-                        .foregroundColor(.black)
-                }
-                .frame(maxWidth: .infinity, minHeight: 44)
-                .padding(10)
-                .background(Color(Resources.Colors.background.rawValue))
-
                 ScrollView {
                     ForEach(viewModel.characters) { character in
-                        NavigationLink(destination:  DetailCharacterBuilder().build(with: character)) {
-                            CharacterRow(character: character)
-                                .padding(.trailing, 20)
-                                .padding(.leading, 20)
-                        }
-                    }
-                    if viewModel.hasNextPage {
-                        Button {
-                            viewModel.loadMoreIfNeeded()
-                        } label: {
-                            Text("Cargar más")
-                        }
-                        .frame(maxWidth: .infinity, minHeight: 44)
-                        .background(Color.black)
-                        .foregroundColor(.white)
+                        CharacterRow(character: character)
+                            .padding(.trailing, 20)
+                            .padding(.leading, 20)
                     }
                 }
             }
         }.task {
             await viewModel.load()
-        }.edgesIgnoringSafeArea(.all)
-            .navigationTitle("Lista de personajes")
-            .accentColor(.black)
+        }
     }
 }
 
