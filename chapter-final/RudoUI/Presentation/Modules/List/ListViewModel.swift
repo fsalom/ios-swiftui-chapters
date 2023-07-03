@@ -13,8 +13,9 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
     @Published var hasMoreCharactersPendingToLoad: Bool = true
     @Published var searchText: String {
         didSet {
-            if !searchText.isEmpty && searchText.count > 2 {
+            if !searchText.isEmpty && searchText.count > 1 {
                 saveCurrentCharactersToInitiateSearch()
+                resetSearch()
                 search(this: searchText)
             }
             if searchText.isEmpty {
@@ -137,14 +138,17 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
     }
 
     func saveCurrentCharactersToInitiateSearch() {
-        page = 1
         if originalCharacters.isEmpty {
             originalCharacters = characters
             originalPage = page
 
-            characters.removeAll()
-            page = 1
-            searchHasNextPage = true
+            resetSearch()
         }
+    }
+
+    func resetSearch() {
+        characters.removeAll()
+        searchHasNextPage = true
+        page = 1
     }
 }

@@ -22,6 +22,7 @@ class NetworkManager: NetworkManagerProtocol {
             let decoder = JSONDecoder()
             do {
                 if (200..<300).contains(response.statusCode) {
+                    print("☎️ [\(response.statusCode)] \(response.url?.absoluteString ?? "-")")
                     return try decoder.decode(T.self, from: data)
                 } else {
                     throw NetworkError.badResponse
