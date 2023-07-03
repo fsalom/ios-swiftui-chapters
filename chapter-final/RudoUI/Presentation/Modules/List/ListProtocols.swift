@@ -12,6 +12,7 @@ protocol ListViewModelProtocol: ObservableObject  {
     var characters: [RMCharacter] { get set }
     var hasMoreCharactersPendingToLoad: Bool { get set }
     func load() async
+    func checkFavorites() async
     func loadMoreIfNeeded()
     func addOrRemove(this character: RMCharacter)
 }

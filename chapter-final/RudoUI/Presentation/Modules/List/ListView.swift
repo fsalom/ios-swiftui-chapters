@@ -49,6 +49,7 @@ struct ListView<VM>: View where VM: ListViewModelProtocol {
             }
         }.task {
             await viewModel.load()
+            await viewModel.checkFavorites()
         }
     }
 }

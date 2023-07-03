@@ -77,6 +77,17 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         }
     }
 
+    func checkFavorites() async {
+        do {
+            let characters = try await useCase.setFavorites(to: self.characters)
+            await MainActor.run {
+                self.characters = characters
+            }
+        } catch {
+            hasOcurredAnError = true
+        }
+    }
+
     func fetchCharacters() async throws {
         if hasNextPage {
             let (characters, hasNextPage) = try await useCase.getCharactersAndNextPage(for: page)

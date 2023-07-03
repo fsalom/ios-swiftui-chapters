@@ -14,6 +14,7 @@ protocol CharacterUseCaseProtocol {
     func getFavorites() async throws -> [RMCharacter]
     func saveFavorite(_ character: RMCharacter) async throws
     func removeFavorite(_ character: RMCharacter) async throws
+    func setFavorites(to characters: [RMCharacter]) async throws -> [RMCharacter]
 }
 
 final class CharacterUseCase {
@@ -61,9 +62,7 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
         var charactersWithFavorites: [RMCharacter] = []
         let favorites = try await self.getFavorites()
         for var character in characters {
-            if favorites.contains(where: {$0.id == character.id}) {
-                character.isFavorite = true
-            }
+            character.isFavorite = favorites.contains(where: {$0.id == character.id}) ? true : false
             charactersWithFavorites.append(character)
         }
         return charactersWithFavorites
