@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C15B7ED72A542A200067B28E /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B7ED62A542A200067B28E /* ListRowView.swift */; };
 		C1D6C72B2A3B584700780F56 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72A2A3B584700780F56 /* App.swift */; };
 		C1D6C72F2A3B584800780F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D6C72E2A3B584800780F56 /* Assets.xcassets */; };
 		C1D6C7322A3B584800780F56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1D6C7312A3B584800780F56 /* Preview Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C15B7ED62A542A200067B28E /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		C1D6C7272A3B584700780F56 /* RudoUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RudoUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D6C72A2A3B584700780F56 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		C1D6C72E2A3B584800780F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		C1D6C78B2A3C7D6900780F56 /* Row */ = {
 			isa = PBXGroup;
 			children = (
+				C15B7ED62A542A200067B28E /* ListRowView.swift */,
 			);
 			path = Row;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				C1D6C7A92A4042CA00780F56 /* CharacterUseCase.swift in Sources */,
 				C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
+				C15B7ED72A542A200067B28E /* ListRowView.swift in Sources */,
 				C1D6C7A72A40424D00780F56 /* CharacterRepository.swift in Sources */,
 				C1D6C79F2A40423E00780F56 /* RMCharacterDTO.swift in Sources */,
 				C1D6C7972A3E420700780F56 /* Resources.swift in Sources */,
