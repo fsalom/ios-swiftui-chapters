@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterRow: View {
-    @Binding var character: RMCharacter
+    @State var character: RMCharacter
 
     var body: some View {
         HStack {
@@ -60,6 +60,6 @@ struct CharacterRow: View {
 struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
         let character = RMCharacter()
-        CharacterRow(character: .constant(character))
+        CharacterRow(character: character)
     }
 }

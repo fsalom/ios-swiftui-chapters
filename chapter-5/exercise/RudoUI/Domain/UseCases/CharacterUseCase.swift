@@ -14,6 +14,7 @@ protocol CharacterUseCaseProtocol {
     func getFavorites() async throws -> [RMCharacter]
     func saveFavorite(_ character: RMCharacter) async throws
     func removeFavorite(_ character: RMCharacter) async throws
+    func setFavorites(to characters: [RMCharacter]) async throws -> [RMCharacter]
 }
 
 final class CharacterUseCase {
@@ -56,6 +57,6 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
     }
 
     func setFavorites(to characters: [RMCharacter]) async throws -> [RMCharacter] {
-        return []
+        return characters
     }
 }
