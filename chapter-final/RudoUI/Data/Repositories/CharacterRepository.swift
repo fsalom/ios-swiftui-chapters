@@ -10,9 +10,9 @@ import Foundation
 protocol CharacterRepositoryProtocol {
     func getPagination(for page: Int) async throws -> Pagination
     func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination
-    func getFavorites() async throws -> [RMCharacter]
-    func saveFavorite(_ character: RMCharacter) async throws
-    func removeFavorite(_ character: RMCharacter) async throws
+    func getFavorites() async throws -> [Character]
+    func saveFavorite(_ character: Character) async throws
+    func removeFavorite(_ character: Character) async throws
 }
 
 final class CharacterRepository: CharacterRepositoryProtocol {
@@ -41,15 +41,15 @@ final class CharacterRepository: CharacterRepositoryProtocol {
         return cachePagination
     }
 
-    func getFavorites() async throws -> [RMCharacter] {
+    func getFavorites() async throws -> [Character] {
         return try await cacheDatasource.getFavorites()
     }
 
-    func saveFavorite(_ character: RMCharacter) async throws {
+    func saveFavorite(_ character: Character) async throws {
         try await cacheDatasource.saveFavorite(character)
     }
 
-    func removeFavorite(_ character: RMCharacter) async throws {
+    func removeFavorite(_ character: Character) async throws {
         try await cacheDatasource.removeFavorite(character)
     }
 }

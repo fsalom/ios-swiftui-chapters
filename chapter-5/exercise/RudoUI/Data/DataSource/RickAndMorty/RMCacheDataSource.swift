@@ -23,14 +23,28 @@ class RMCacheDataSource: RMCharacterDataSourceProtocol {
     }
 
     func getFavorites() async throws -> [RMCharacter] {
-        return []
+        guard let charactersDTO = localManager.retrieve(objectFor: "FAVORITES", of: [RMCharacterDTO].self) else {
+            return []
+        }
+        var characters = [RMCharacter]()
+        for characterDTO in charactersDTO {
+            characters.append(RMCharacter(dto: characterDTO))
+        }
+        return characters
     }
 
     func saveFavorite(_ character: RMCharacter) async throws {
-
+        var charactersDTO = localManager.retrieve(objectFor: "FAVORITES", of: [RMCharacterDTO].self) ?? []
+        let characterDTO = RMCharacterDTO(entity: character)
+        charactersDTO.append(characterDTO)
+        localManager.save(objectFor: "FAVORITES", this: charactersDTO)
     }
 
     func removeFavorite(_ character: RMCharacter) async throws {
-
+        guard var charactersDTO = localManager.retrieve(objectFor: "FAVORITES", of: [RMCharacterDTO].self) else {
+            return
+        }
+        charactersDTO.removeAll(where: { $0.id == character.id })
+        localManager.save(objectFor: "FAVORITES", this: charactersDTO)
     }
 }

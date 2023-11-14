@@ -14,12 +14,15 @@ struct FavoritesView<VM>: View where VM: FavoritesViewModelProtocol {
         VStack {
             NavigationStack {
                 ScrollView {
-                    ForEach(viewModel.characters) { character in
+                    ForEach($viewModel.characters) { $character in
                         NavigationLink(destination:  DetailCharacterBuilder().build(with: character)) {
-                            CharacterRow(character: character)
+                            CharacterRow(character: $character)
                                 .padding(.trailing, 20)
                                 .padding(.leading, 20)
 
+                        }.onChange(of: character) { _ in
+                            viewModel.addOrRemove(this: character)
+                            
                         }
                     }
                 }.navigationTitle(String.Favorites.title.localized)

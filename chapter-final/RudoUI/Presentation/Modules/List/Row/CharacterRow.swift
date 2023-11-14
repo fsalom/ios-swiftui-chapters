@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterRow: View {
-    @Binding var character: RMCharacter
+    @Binding var character: Character
 
     var body: some View {
         HStack {
@@ -52,7 +52,7 @@ struct CharacterRow: View {
         }.frame(maxWidth: .infinity)
     }
 
-    func getStatusColor(for status: RMCharacter.RMStatus) -> Color {
+    func getStatusColor(for status: Character.RMStatus) -> Color {
         switch status {
         case .Dead:
             return .red
@@ -66,7 +66,7 @@ struct CharacterRow: View {
 
 struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
-        let character = RMCharacter()
+        let character = Character()
         CharacterRow(character: .constant(character))
     }
 }

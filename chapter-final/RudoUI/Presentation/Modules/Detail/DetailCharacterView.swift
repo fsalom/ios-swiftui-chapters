@@ -64,7 +64,7 @@ struct DetailCharacterView<VM>: View where VM: DetailCharacterViewModelProtocol 
             )
     }
 
-    func getStatusColor(for status: RMCharacter.RMStatus) -> Color {
+    func getStatusColor(for status: Character.RMStatus) -> Color {
         switch status {
         case .Dead:
             return .red
@@ -78,6 +78,6 @@ struct DetailCharacterView<VM>: View where VM: DetailCharacterViewModelProtocol 
 
 struct DetailCharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailCharacterBuilder().build(with: RMCharacter())
+        DetailCharacterBuilder().build(with: Character())
     }
 }

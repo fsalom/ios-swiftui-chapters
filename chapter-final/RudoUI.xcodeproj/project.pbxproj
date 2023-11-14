@@ -18,7 +18,7 @@
 		C1D6C74B2A3B584900780F56 /* RudoUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */; };
 		C1D6C74D2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */; };
 		C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */; };
-		C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7652A3B597E00780F56 /* RMCharacter.swift */; };
+		C1D6C7662A3B597E00780F56 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7652A3B597E00780F56 /* Character.swift */; };
 		C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */; };
 		C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */; };
 		C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */; };
@@ -80,7 +80,7 @@
 		C1D6C74A2A3B584900780F56 /* RudoUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITests.swift; sourceTree = "<group>"; };
 		C1D6C74C2A3B584900780F56 /* RudoUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudoUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
-		C1D6C7652A3B597E00780F56 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
+		C1D6C7652A3B597E00780F56 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRemoteDataSource.swift; sourceTree = "<group>"; };
 		C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
@@ -135,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1510BEA2B03EC8D00C2790F /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C1510BEB2B03ECBD00C2790F /* Remote */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		C1510BEB2B03ECBD00C2790F /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7612A3B590500780F56 /* RickAndMorty */,
+				C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		C1D6C71E2A3B584700780F56 = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +223,6 @@
 		C1D6C75A2A3B58B700780F56 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C76E2A3B5AAB00780F56 /* DTOs */,
 				C1D6C75F2A3B58ED00780F56 /* DataSource */,
 				C1D6C7732A3B694700780F56 /* Repositories */,
 				C1D6C75E2A3B58E200780F56 /* CoreData */,
@@ -252,7 +268,7 @@
 		C1D6C75F2A3B58ED00780F56 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7612A3B590500780F56 /* RickAndMorty */,
+				C1510BEA2B03EC8D00C2790F /* Character */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -272,7 +288,7 @@
 		C1D6C7612A3B590500780F56 /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */,
+				C1D6C76E2A3B5AAB00780F56 /* DTOs */,
 				C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */,
 				C1DDF7052A4C76FC0031BFE7 /* RMCacheDataSource.swift */,
 			);
@@ -282,7 +298,7 @@
 		C1D6C7642A3B596F00780F56 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7652A3B597E00780F56 /* RMCharacter.swift */,
+				C1D6C7652A3B597E00780F56 /* Character.swift */,
 				C1D6C76C2A3B5A9E00780F56 /* Pagination.swift */,
 			);
 			path = Entities;
@@ -538,7 +554,7 @@
 				C1D6C77D2A3B8FA900780F56 /* ListBuilder.swift in Sources */,
 				C1DDF7042A4C5EAA0031BFE7 /* FavoritesProtocols.swift in Sources */,
 				C1D6C7682A3B59A900780F56 /* RMRemoteDataSource.swift in Sources */,
-				C1D6C7662A3B597E00780F56 /* RMCharacter.swift in Sources */,
+				C1D6C7662A3B597E00780F56 /* Character.swift in Sources */,
 				C1D6C7342A3B584800780F56 /* Persistence.swift in Sources */,
 				C179CEFD2A49D0C5007BA0FB /* Localizable.swift in Sources */,
 				C1DDF6FE2A4C5E7C0031BFE7 /* FavoritesView.swift in Sources */,

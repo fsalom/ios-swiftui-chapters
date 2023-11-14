@@ -42,12 +42,14 @@ final class CharacterRepository: CharacterRepositoryProtocol {
     }
 
     func getFavorites() async throws -> [RMCharacter] {
-        return []
+        return try await cacheDatasource.getFavorites()
     }
 
     func saveFavorite(_ character: RMCharacter) async throws {
+        try await cacheDatasource.saveFavorite(character)
     }
 
     func removeFavorite(_ character: RMCharacter) async throws {
+        try await cacheDatasource.removeFavorite(character)
     }
 }

@@ -28,13 +28,15 @@ final class CharacterUseCase {
 extension CharacterUseCase: CharacterUseCaseProtocol {
     func getCharactersAndNextPage(for page: Int) async throws -> ([RMCharacter], Bool) {
         let pagination = try await repository.getPagination(for: page)
-        return (pagination.characters, pagination.hasNextPage)
+        let charactersWithFavorite = try await setFavorites(to: pagination.characters)
+        return (charactersWithFavorite, pagination.hasNextPage)
     }
 
     func getCharactersAndNextPageWhenSearching(this name: String,
                                                for page: Int) async throws -> ([RMCharacter], Bool) {
         let pagination = try await repository.getPaginationWhenSearching(this: name, for: page)
-        return (pagination.characters, pagination.hasNextPage)
+        let charactersWithFavorite = try await setFavorites(to: pagination.characters)
+        return (charactersWithFavorite, pagination.hasNextPage)
     }
 
     func getCharactersRelatedTo(this character: RMCharacter) async throws -> [RMCharacter] {
@@ -45,18 +47,33 @@ extension CharacterUseCase: CharacterUseCaseProtocol {
     }
 
     func getFavorites() async throws -> [RMCharacter] {
-        return []
+        return try await repository.getFavorites()
     }
 
     func saveFavorite(_ character: RMCharacter) async throws {
-
+        try await repository.saveFavorite(character)
     }
 
     func removeFavorite(_ character: RMCharacter) async throws {
-
+        try await repository.removeFavorite(character)
     }
 
     func setFavorites(to characters: [RMCharacter]) async throws -> [RMCharacter] {
-        return characters
+        var charactersWithFavorite = characters
+        let favorites = try await getFavorites()
+
+        for (index, character) in charactersWithFavorite.enumerated()
+        {
+            charactersWithFavorite[index].isFavorite = false
+        }
+
+        for favorite in favorites {
+            guard let index = charactersWithFavorite.lastIndex(where: {$0.id == favorite.id}) else {
+                continue
+            }
+            charactersWithFavorite[index].isFavorite = true
+        }
+
+        return charactersWithFavorite
     }
 }

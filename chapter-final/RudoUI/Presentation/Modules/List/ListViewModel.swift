@@ -8,7 +8,7 @@
 import Foundation
 
 class ListViewModel: ObservableObject, ListViewModelProtocol {
-    @Published var characters: [RMCharacter] = []
+    @Published var characters: [Character] = []
     @Published var hasOcurredAnError: Bool = false
     @Published var hasMoreCharactersPendingToLoad: Bool = true
     @Published var searchText: String {
@@ -24,7 +24,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         }
     }
 
-    var originalCharacters: [RMCharacter] = []
+    var originalCharacters: [Character] = []
     var originalPage: Int = 1
 
     var searchHasNextPage: Bool {
@@ -99,7 +99,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         }
     }
 
-    func addOrRemove(this character: RMCharacter) {
+    func addOrRemove(this character: Character) {
         Task {
             if character.isFavorite {
                 try await self.useCase.saveFavorite(character)

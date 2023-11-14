@@ -10,7 +10,7 @@ struct RMCharacterDTO: Codable {
     var gender: String?
     var isFavorite: Bool? = false
 
-    init(entity: RMCharacter) {
+    init(entity: Character) {
         id = entity.id
         image = entity.image
         name = entity.name

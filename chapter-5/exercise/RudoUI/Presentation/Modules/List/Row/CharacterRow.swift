@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterRow: View {
-    @State var character: RMCharacter
+    @Binding var character: RMCharacter
 
     var body: some View {
         HStack {
@@ -41,7 +41,13 @@ struct CharacterRow: View {
                 Text(character.gender).font(.subheadline).foregroundColor(.black)
                 Text(character.species).font(.subheadline).foregroundColor(.black)
             }
-            Spacer()            
+            Spacer()
+            Button {
+                character.isFavorite.toggle()                
+            } label: {
+                Image(systemName: character.isFavorite ? "star.fill" : "star")
+            }
+
         }.frame(maxWidth: .infinity)
     }
 
@@ -60,6 +66,6 @@ struct CharacterRow: View {
 struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
         let character = RMCharacter()
-        CharacterRow(character: character)
+        CharacterRow(character: .constant(character))
     }
 }

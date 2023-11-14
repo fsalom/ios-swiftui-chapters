@@ -8,7 +8,7 @@
 import Foundation
 
 class FavoritesViewModel: ObservableObject, FavoritesViewModelProtocol {
-    @Published var characters: [RMCharacter] = []
+    @Published var characters: [Character] = []
     @Published var errorOccurred: Bool = false
 
     var useCase: CharacterUseCaseProtocol!
@@ -28,7 +28,7 @@ class FavoritesViewModel: ObservableObject, FavoritesViewModelProtocol {
         }
     }
 
-    func addOrRemove(this character: RMCharacter) {
+    func addOrRemove(this character: Character) {
         Task {
             if character.isFavorite {
                 try await self.useCase.saveFavorite(character)

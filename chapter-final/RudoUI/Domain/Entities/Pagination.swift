@@ -2,10 +2,10 @@ import Foundation
 
 struct Pagination {
     var hasNextPage: Bool
-    var characters: [RMCharacter]
+    var characters: [Character]
 
     init(dto: PaginationDTO) {
         hasNextPage = dto.info?.next != nil
-        characters = dto.results?.map({ RMCharacter(dto: $0) }) ?? []
+        characters = dto.results?.map({ Character(dto: $0) }) ?? []
     }
 }

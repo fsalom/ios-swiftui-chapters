@@ -8,8 +8,8 @@
 import Foundation
 
 protocol FavoritesViewModelProtocol: ObservableObject  {
-    var characters: [RMCharacter] { get set }
+    var characters: [Character] { get set }
     var errorOccurred: Bool { get set }
     func load() async
-    func addOrRemove(this character: RMCharacter)
+    func addOrRemove(this character: Character)
 }

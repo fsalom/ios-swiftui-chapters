@@ -8,8 +8,8 @@
 import Foundation
 
 protocol DetailCharacterViewModelProtocol: ObservableObject  {
-    var character: RMCharacter { get set }
+    var character: Character { get set }
     var errorOccurred: Bool { get set }
-    var relatedCharacters: [RMCharacter] { get set }
+    var relatedCharacters: [Character] { get set }
     func getRelatedCharacters() async
 }

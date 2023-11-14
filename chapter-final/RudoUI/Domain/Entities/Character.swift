@@ -1,6 +1,6 @@
 import Foundation
 
-struct RMCharacter: Identifiable, Equatable {
+struct Character: Identifiable, Equatable {
     enum RMStatus: String {
         case Dead
         case Alive

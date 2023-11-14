@@ -8,13 +8,13 @@
 import Foundation
 
 class DetailCharacterViewModel: ObservableObject, DetailCharacterViewModelProtocol {
-    @Published var character: RMCharacter
+    @Published var character: Character
     @Published var errorOccurred: Bool = false
-    @Published var relatedCharacters: [RMCharacter] = []
+    @Published var relatedCharacters: [Character] = []
 
     var useCase: CharacterUseCaseProtocol!
 
-    init(useCase: CharacterUseCaseProtocol, character: RMCharacter) {
+    init(useCase: CharacterUseCaseProtocol, character: Character) {
         self.useCase = useCase
         self.character = character
     }

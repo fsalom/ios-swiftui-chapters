@@ -34,9 +34,9 @@ class RMRemoteDataSource: RMCharacterDataSourceProtocol {
         return Pagination(dto: paginationDTO)
     }
 
-    func getFavorites() async throws -> [RMCharacter] { return [] }
+    func getFavorites() async throws -> [Character] { return [] }
 
-    func saveFavorite(_ character: RMCharacter) async throws { }
+    func saveFavorite(_ character: Character) async throws { }
 
-    func removeFavorite(_ character: RMCharacter) async throws { }
+    func removeFavorite(_ character: Character) async throws { }
 }

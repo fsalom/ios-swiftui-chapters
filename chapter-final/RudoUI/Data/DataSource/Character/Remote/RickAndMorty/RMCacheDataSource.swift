@@ -22,12 +22,12 @@ class RMCacheDataSource: RMCharacterDataSourceProtocol {
         return nil
     }
 
-    func getFavorites() async throws -> [RMCharacter] {
+    func getFavorites() async throws -> [Character] {
         guard let favoritesDTO = localManager.retrieve(objectFor: "favorites", of: [RMCharacterDTO].self ) else { return []}
-        return favoritesDTO.map({ RMCharacter(dto: $0)})
+        return favoritesDTO.map({ Character(dto: $0)})
     }
 
-    func saveFavorite(_ character: RMCharacter) async throws {
+    func saveFavorite(_ character: Character) async throws {
         let favorites = try await self.getFavorites()
         var favoritesDTO = favorites.map({ RMCharacterDTO(entity: $0)})
         let characterDTO = RMCharacterDTO(entity: character)
@@ -37,7 +37,7 @@ class RMCacheDataSource: RMCharacterDataSourceProtocol {
         localManager.save(objectFor: "favorites", this: favoritesDTO)
     }
 
-    func removeFavorite(_ character: RMCharacter) async throws {
+    func removeFavorite(_ character: Character) async throws {
         let favorites = try await self.getFavorites()
         var favoritesDTO = favorites.map({ RMCharacterDTO(entity: $0)})
         favoritesDTO.removeAll(where: {$0.id == character.id})

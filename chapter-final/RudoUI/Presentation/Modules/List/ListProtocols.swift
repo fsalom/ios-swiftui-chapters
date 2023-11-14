@@ -9,12 +9,12 @@ import Foundation
 
 protocol ListViewModelProtocol: ObservableObject  {
     var searchText: String { get set }
-    var characters: [RMCharacter] { get set }
+    var characters: [Character] { get set }
     var hasMoreCharactersPendingToLoad: Bool { get set }
     func load() async
     func checkFavorites() async
     func loadMoreIfNeeded()
-    func addOrRemove(this character: RMCharacter)
+    func addOrRemove(this character: Character)
 }
 
 
