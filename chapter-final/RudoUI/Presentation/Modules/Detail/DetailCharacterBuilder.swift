@@ -10,8 +10,9 @@ import Foundation
 class DetailCharacterBuilder {
     func build(with character: Character) -> DetailCharacterView<DetailCharacterViewModel> {
         let networkDataSource = RMRemoteDataSource(networkManager: NetworkManager())
+        let cacheDataSource = LocalCacheDataSource(localManager: CacheManager())
         let repository = CharacterRepository(networkDatasource: networkDataSource,
-                                             cacheDatasource: networkDataSource)
+                                             cacheDatasource: cacheDataSource)
         let useCase = CharacterUseCase(repository: repository)
 
         let viewModel = DetailCharacterViewModel(useCase: useCase, character: character)

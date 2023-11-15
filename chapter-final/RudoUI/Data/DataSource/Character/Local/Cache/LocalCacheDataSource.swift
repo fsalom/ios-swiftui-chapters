@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RMCacheDataSource: RMCharacterDataSourceProtocol {
+class LocalCacheDataSource: LocalCharacterDataSourceProtocol {
     var localManager: LocalManagerProtocol
 
     init(localManager: LocalManagerProtocol) {

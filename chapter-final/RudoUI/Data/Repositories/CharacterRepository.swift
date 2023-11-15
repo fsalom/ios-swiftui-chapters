@@ -17,10 +17,10 @@ protocol CharacterRepositoryProtocol {
 
 final class CharacterRepository: CharacterRepositoryProtocol {
     var networkDatasource: RMCharacterDataSourceProtocol
-    var cacheDatasource: RMCharacterDataSourceProtocol
+    var cacheDatasource: LocalCharacterDataSourceProtocol
 
     init(networkDatasource: RMCharacterDataSourceProtocol,
-         cacheDatasource: RMCharacterDataSourceProtocol) {
+         cacheDatasource: LocalCharacterDataSourceProtocol) {
         self.networkDatasource = networkDatasource
         self.cacheDatasource = cacheDatasource
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C1510BEF2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BEE2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift */; };
 		C179CEFD2A49D0C5007BA0FB /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179CEFC2A49D0C5007BA0FB /* Localizable.swift */; };
 		C179CEFE2A49D2E9007BA0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C179CF002A49D2E9007BA0FB /* Localizable.strings */; };
 		C1D6C72B2A3B584700780F56 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72A2A3B584700780F56 /* App.swift */; };
@@ -44,7 +45,7 @@
 		C1DDF7002A4C5E8C0031BFE7 /* FavoritesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF6FF2A4C5E8C0031BFE7 /* FavoritesBuilder.swift */; };
 		C1DDF7022A4C5E9A0031BFE7 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */; };
 		C1DDF7042A4C5EAA0031BFE7 /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */; };
-		C1DDF7062A4C76FC0031BFE7 /* RMCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7052A4C76FC0031BFE7 /* RMCacheDataSource.swift */; };
+		C1DDF7062A4C76FC0031BFE7 /* LocalCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7052A4C76FC0031BFE7 /* LocalCacheDataSource.swift */; };
 		C1DDF7082A4C778B0031BFE7 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7072A4C778B0031BFE7 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1510BEE2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
 		C179CEFC2A49D0C5007BA0FB /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		C179CEFF2A49D2E9007BA0FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1D6C7272A3B584700780F56 /* RudoUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RudoUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +108,7 @@
 		C1DDF6FF2A4C5E8C0031BFE7 /* FavoritesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBuilder.swift; sourceTree = "<group>"; };
 		C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
-		C1DDF7052A4C76FC0031BFE7 /* RMCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCacheDataSource.swift; sourceTree = "<group>"; };
+		C1DDF7052A4C76FC0031BFE7 /* LocalCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSource.swift; sourceTree = "<group>"; };
 		C1DDF7072A4C778B0031BFE7 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		C1510BEA2B03EC8D00C2790F /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				C1510BEC2B03EE0100C2790F /* Local */,
 				C1510BEB2B03ECBD00C2790F /* Remote */,
 			);
 			path = Character;
@@ -150,6 +153,23 @@
 				C1D6C7622A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		C1510BEC2B03EE0100C2790F /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C1510BED2B03EE3D00C2790F /* Cache */,
+				C1510BEE2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		C1510BED2B03EE3D00C2790F /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				C1DDF7052A4C76FC0031BFE7 /* LocalCacheDataSource.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		C1D6C71E2A3B584700780F56 = {
@@ -290,7 +310,6 @@
 			children = (
 				C1D6C76E2A3B5AAB00780F56 /* DTOs */,
 				C1D6C7672A3B59A900780F56 /* RMRemoteDataSource.swift */,
-				C1DDF7052A4C76FC0031BFE7 /* RMCacheDataSource.swift */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -560,6 +579,7 @@
 				C1DDF6FE2A4C5E7C0031BFE7 /* FavoritesView.swift in Sources */,
 				C1D6C7882A3C7C3900780F56 /* DetailCharacterProtocols.swift in Sources */,
 				C1D6C77F2A3B8FC200780F56 /* ListViewModel.swift in Sources */,
+				C1510BEF2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift in Sources */,
 				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
 				C1DDF6FB2A4C5D760031BFE7 /* TabbarView.swift in Sources */,
@@ -571,7 +591,7 @@
 				C1D6C78A2A3C7C4900780F56 /* DetailCharacterBuilder.swift in Sources */,
 				C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */,
 				C1D6C7902A3C7FB400780F56 /* SplashView.swift in Sources */,
-				C1DDF7062A4C76FC0031BFE7 /* RMCacheDataSource.swift in Sources */,
+				C1DDF7062A4C76FC0031BFE7 /* LocalCacheDataSource.swift in Sources */,
 				C1D6C7862A3C7C2800780F56 /* DetailCharacterViewModel.swift in Sources */,
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
 				C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */,

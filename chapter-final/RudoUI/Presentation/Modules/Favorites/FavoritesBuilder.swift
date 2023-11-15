@@ -10,7 +10,7 @@ import Foundation
 class FavoritesBuilder {
     func build() -> FavoritesView<FavoritesViewModel> {
         let networkDataSource = RMRemoteDataSource(networkManager: NetworkManager())
-        let cacheDataSource = RMCacheDataSource(localManager: CacheManager())
+        let cacheDataSource = LocalCacheDataSource(localManager: CacheManager())
         let repository = CharacterRepository(networkDatasource: networkDataSource,
                                              cacheDatasource: cacheDataSource)
         let useCase = CharacterUseCase(repository: repository)
