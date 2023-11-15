@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C1510BEF2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BEE2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift */; };
+		C1510BF32B04D31B00C2790F /* LocalManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BF22B04D31B00C2790F /* LocalManagerProtocol.swift */; };
+		C1510BF72B04D36600C2790F /* RemoteManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BF62B04D36600C2790F /* RemoteManagerProtocol.swift */; };
+		C1510BFA2B04D3EC00C2790F /* CharacterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BF92B04D3EC00C2790F /* CharacterRepositoryProtocol.swift */; };
 		C179CEFD2A49D0C5007BA0FB /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179CEFC2A49D0C5007BA0FB /* Localizable.swift */; };
 		C179CEFE2A49D2E9007BA0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C179CF002A49D2E9007BA0FB /* Localizable.strings */; };
 		C1D6C72B2A3B584700780F56 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72A2A3B584700780F56 /* App.swift */; };
@@ -46,7 +49,7 @@
 		C1DDF7022A4C5E9A0031BFE7 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */; };
 		C1DDF7042A4C5EAA0031BFE7 /* FavoritesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */; };
 		C1DDF7062A4C76FC0031BFE7 /* LocalCacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7052A4C76FC0031BFE7 /* LocalCacheDataSource.swift */; };
-		C1DDF7082A4C778B0031BFE7 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7072A4C778B0031BFE7 /* CacheManager.swift */; };
+		C1DDF7082A4C778B0031BFE7 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF7072A4C778B0031BFE7 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		C1510BEE2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCharacterDataSourceProtocol.swift; sourceTree = "<group>"; };
+		C1510BF22B04D31B00C2790F /* LocalManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManagerProtocol.swift; sourceTree = "<group>"; };
+		C1510BF62B04D36600C2790F /* RemoteManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteManagerProtocol.swift; sourceTree = "<group>"; };
+		C1510BF92B04D3EC00C2790F /* CharacterRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryProtocol.swift; sourceTree = "<group>"; };
 		C179CEFC2A49D0C5007BA0FB /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		C179CEFF2A49D2E9007BA0FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1D6C7272A3B584700780F56 /* RudoUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RudoUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +115,7 @@
 		C1DDF7012A4C5E9A0031BFE7 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		C1DDF7032A4C5EAA0031BFE7 /* FavoritesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocols.swift; sourceTree = "<group>"; };
 		C1DDF7052A4C76FC0031BFE7 /* LocalCacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheDataSource.swift; sourceTree = "<group>"; };
-		C1DDF7072A4C778B0031BFE7 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		C1DDF7072A4C778B0031BFE7 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +176,49 @@
 				C1DDF7052A4C76FC0031BFE7 /* LocalCacheDataSource.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		C1510BF02B04D2FC00C2790F /* LocalManager */ = {
+			isa = PBXGroup;
+			children = (
+				C1510BF12B04D30A00C2790F /* UserDefaults */,
+				C1510BF22B04D31B00C2790F /* LocalManagerProtocol.swift */,
+			);
+			path = LocalManager;
+			sourceTree = "<group>";
+		};
+		C1510BF12B04D30A00C2790F /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C1DDF7072A4C778B0031BFE7 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C1510BF42B04D33A00C2790F /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				C1510BF52B04D34700C2790F /* URLSession */,
+				C1510BF62B04D36600C2790F /* RemoteManagerProtocol.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		C1510BF52B04D34700C2790F /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		C1510BF82B04D3D900C2790F /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				C1D6C7742A3B697400780F56 /* CharacterRepository.swift */,
+				C1510BF92B04D3EC00C2790F /* CharacterRepositoryProtocol.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 		C1D6C71E2A3B584700780F56 = {
@@ -326,8 +375,8 @@
 		C1D6C7692A3B5A3200780F56 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C76A2A3B5A4500780F56 /* NetworkManager.swift */,
-				C1DDF7072A4C778B0031BFE7 /* CacheManager.swift */,
+				C1510BF42B04D33A00C2790F /* NetworkManager */,
+				C1510BF02B04D2FC00C2790F /* LocalManager */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -344,7 +393,7 @@
 		C1D6C7732A3B694700780F56 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				C1D6C7742A3B697400780F56 /* CharacterRepository.swift */,
+				C1510BF82B04D3D900C2790F /* Character */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -567,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1DDF7022A4C5E9A0031BFE7 /* FavoritesViewModel.swift in Sources */,
+				C1510BF32B04D31B00C2790F /* LocalManagerProtocol.swift in Sources */,
 				C1D6C78D2A3C7D8100780F56 /* CharacterRow.swift in Sources */,
 				C1D6C7722A3B5AE000780F56 /* PaginationDTO.swift in Sources */,
 				C1D6C7B42A41999200780F56 /* RelatedCharacterRow.swift in Sources */,
@@ -582,12 +632,14 @@
 				C1510BEF2B03EE8700C2790F /* LocalCharacterDataSourceProtocol.swift in Sources */,
 				C1D6C76B2A3B5A4500780F56 /* NetworkManager.swift in Sources */,
 				C1D6C72B2A3B584700780F56 /* App.swift in Sources */,
+				C1510BFA2B04D3EC00C2790F /* CharacterRepositoryProtocol.swift in Sources */,
 				C1DDF6FB2A4C5D760031BFE7 /* TabbarView.swift in Sources */,
 				C1D6C76D2A3B5A9E00780F56 /* Pagination.swift in Sources */,
 				C1DDF7002A4C5E8C0031BFE7 /* FavoritesBuilder.swift in Sources */,
 				C1D6C7782A3B6A5400780F56 /* CharacterUseCase.swift in Sources */,
 				C1D6C7842A3C7C1400780F56 /* DetailCharacterView.swift in Sources */,
 				C1D6C7632A3B593D00780F56 /* RMCharacterDataSourceProtocol.swift in Sources */,
+				C1510BF72B04D36600C2790F /* RemoteManagerProtocol.swift in Sources */,
 				C1D6C78A2A3C7C4900780F56 /* DetailCharacterBuilder.swift in Sources */,
 				C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */,
 				C1D6C7902A3C7FB400780F56 /* SplashView.swift in Sources */,
@@ -595,7 +647,7 @@
 				C1D6C7862A3C7C2800780F56 /* DetailCharacterViewModel.swift in Sources */,
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
 				C1D6C7812A3B8FFA00780F56 /* ListProtocols.swift in Sources */,
-				C1DDF7082A4C778B0031BFE7 /* CacheManager.swift in Sources */,
+				C1DDF7082A4C778B0031BFE7 /* UserDefaultsManager.swift in Sources */,
 				C1D6C7752A3B697400780F56 /* CharacterRepository.swift in Sources */,
 				C1D6C7372A3B584800780F56 /* RudoUI.xcdatamodeld in Sources */,
 				C1D6C7972A3E420700780F56 /* Resources.swift in Sources */,

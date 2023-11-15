@@ -8,11 +8,7 @@ enum NetworkError: Error{
     case invalidResponse
 }
 
-protocol NetworkManagerProtocol {
-    func call<T: Decodable>(this url: URLRequest, of type: T.Type) async throws -> T
-}
-
-class NetworkManager: NetworkManagerProtocol {
+class NetworkManager: RemoteManagerProtocol {
     func call<T: Decodable>(this url: URLRequest, of type: T.Type) async throws -> T {
         do {
             let (data, response) = try await URLSession.shared.data(for: url)

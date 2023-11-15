@@ -7,13 +7,7 @@
 
 import Foundation
 
-protocol LocalManagerProtocol {
-    func save<T: Codable>(objectFor: String, this data: T)
-    func retrieve<T: Decodable>(objectFor: String, of type: T.Type) -> T?
-    func clear()
-}
-
-class CacheManager: LocalManagerProtocol {
+class UserDefaultsManager: LocalManagerProtocol {
     func save<T: Codable>(objectFor: String, this data: T) {
         guard let encodedData = try? JSONEncoder().encode(data) else {
             print("🤬 ERROR: Cache.save(objectFor: \(objectFor)) > JSON ENCODER ERROR")

@@ -7,14 +7,6 @@
 
 import Foundation
 
-protocol CharacterRepositoryProtocol {
-    func getPagination(for page: Int) async throws -> Pagination
-    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination
-    func getFavorites() async throws -> [Character]
-    func saveFavorite(_ character: Character) async throws
-    func removeFavorite(_ character: Character) async throws
-}
-
 final class CharacterRepository: CharacterRepositoryProtocol {
     var networkDatasource: RMCharacterDataSourceProtocol
     var cacheDatasource: LocalCharacterDataSourceProtocol

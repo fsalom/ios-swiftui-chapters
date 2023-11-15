@@ -8,9 +8,9 @@
 import Foundation
 
 class RMRemoteDataSource: RMCharacterDataSourceProtocol {
-    var networkManager: NetworkManagerProtocol
+    var networkManager: RemoteManagerProtocol
 
-    init(networkManager: NetworkManagerProtocol) {
+    init(networkManager: RemoteManagerProtocol) {
         self.networkManager = networkManager
     }
 
