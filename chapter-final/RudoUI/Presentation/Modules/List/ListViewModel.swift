@@ -63,7 +63,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
                     search(this: searchText)
                 }
             } catch {
-                hasOcurredAnError = true
+                handle(this: error)
             }
         }
     }
@@ -74,7 +74,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
                 try await fetchCharacters()
             }
         } catch {
-            hasOcurredAnError = true
+            handle(this: error)
         }
     }
 
@@ -85,7 +85,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
                 self.characters = characters
             }
         } catch {
-            hasOcurredAnError = true
+            handle(this: error)
         }
     }
 
@@ -119,9 +119,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
                         self.searchHasNextPage = hasNextPage
                     }
                 } catch {
-                    await MainActor.run {
-                        hasOcurredAnError = true
-                    }
+                    handle(this: error)
                 }
             }
         }
@@ -150,5 +148,11 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         characters.removeAll()
         searchHasNextPage = true
         page = 1
+    }
+
+    func handle(this error: Error) async {
+        DispatchQueue.main.async {
+            self.hasOcurredAnError = true
+        }
     }
 }
