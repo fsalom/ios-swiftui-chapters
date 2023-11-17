@@ -18,30 +18,31 @@ final class CharacterRepository: CharacterRepositoryProtocol {
     }
 
     func getPagination(for page: Int) async throws -> Pagination {        
-        guard let cachePagination = try await cacheDatasource.getPagination(for: page) else {
-            let networkPagination = try await networkDatasource.getPagination(for: page)
-            return networkPagination!
+        let networkPagination = try await networkDatasource.getPagination(for: page)
+        guard let pagination = networkPagination else {
+            return Pagination(hasNextPage: false, characters: [])
         }
-        return cachePagination
+        return pagination.toDomain()
     }
 
     func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination {
-        guard let cachePagination = try await cacheDatasource.getPaginationWhenSearching(this: name, for: page) else {
-            let networkPagination = try await networkDatasource.getPaginationWhenSearching(this: name, for: page)
-            return networkPagination!
+        let networkPagination = try await networkDatasource.getPaginationWhenSearching(this: name, for: page)
+        guard let pagination = networkPagination else {
+            return Pagination(hasNextPage: false, characters: [])
         }
-        return cachePagination
+        return pagination.toDomain()
     }
 
     func getFavorites() async throws -> [Character] {
-        return try await cacheDatasource.getFavorites()
+        let favorites = try await cacheDatasource.getFavorites()
+        return favorites.map{ $0.toDomain() }
     }
 
     func saveFavorite(_ character: Character) async throws {
-        try await cacheDatasource.saveFavorite(character)
+        try await cacheDatasource.saveFavorite(character.toDTO())
     }
 
     func removeFavorite(_ character: Character) async throws {
-        try await cacheDatasource.removeFavorite(character)
+        try await cacheDatasource.removeFavorite(character.toDTO())
     }
 }
