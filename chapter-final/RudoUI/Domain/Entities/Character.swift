@@ -16,19 +16,6 @@ struct Character: Identifiable, Equatable {
     var gender: String
     var isFavorite: Bool = false
 
-    init(dto: RMCharacterDTO) {
-        id = dto.id
-        image = dto.image ?? ""
-        name = dto.name ?? ""
-        status = RMStatus(rawValue: dto.status ?? "unknown") ?? .unknown
-        species = dto.species ?? ""
-        type = dto.type ?? ""
-        gender = dto.gender ?? ""
-        if let isFavorite = dto.isFavorite {
-            self.isFavorite = isFavorite
-        }
-    }
-
     init(id: Int, name: String, image: String, status: RMStatus, species: String, type: String, gender: String) {
         self.id = id
         self.image = image

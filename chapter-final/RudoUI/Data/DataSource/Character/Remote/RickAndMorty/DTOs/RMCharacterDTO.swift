@@ -9,15 +9,4 @@ struct RMCharacterDTO: Codable {
     var type: String?
     var gender: String?
     var isFavorite: Bool? = false
-
-    init(entity: Character) {
-        id = entity.id
-        image = entity.image
-        name = entity.name
-        status = entity.status.rawValue
-        species = entity.species
-        type = entity.type
-        gender = entity.gender
-        isFavorite = entity.isFavorite
-    }
 }
