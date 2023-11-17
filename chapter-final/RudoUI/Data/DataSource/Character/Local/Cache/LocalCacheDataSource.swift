@@ -14,32 +14,21 @@ class LocalCacheDataSource: LocalCharacterDataSourceProtocol {
         self.localManager = localManager
     }
 
-    func getPagination(for page: Int) async throws -> Pagination? {
-        return nil
-    }
-
-    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination? {
-        return nil
-    }
-
-    func getFavorites() async throws -> [Character] {
+    func getFavorites() async throws -> [RMCharacterDTO] {
         guard let favoritesDTO = localManager.retrieve(objectFor: "favorites", of: [RMCharacterDTO].self ) else { return []}
-        return favoritesDTO.map({ Character(dto: $0)})
+        return favoritesDTO
     }
 
-    func saveFavorite(_ character: Character) async throws {
-        let favorites = try await self.getFavorites()
-        var favoritesDTO = favorites.map({ RMCharacterDTO(entity: $0)})
-        let characterDTO = RMCharacterDTO(entity: character)
+    func saveFavorite(_ character: RMCharacterDTO) async throws {
+        var favoritesDTO = try await self.getFavorites()
         favoritesDTO.removeAll(where: {$0.id == character.id})
-        favoritesDTO.append(characterDTO)
+        favoritesDTO.append(character)
 
         localManager.save(objectFor: "favorites", this: favoritesDTO)
     }
 
-    func removeFavorite(_ character: Character) async throws {
-        let favorites = try await self.getFavorites()
-        var favoritesDTO = favorites.map({ RMCharacterDTO(entity: $0)})
+    func removeFavorite(_ character: RMCharacterDTO) async throws {
+        var favoritesDTO = try await self.getFavorites()
         favoritesDTO.removeAll(where: {$0.id == character.id})
 
         localManager.save(objectFor: "favorites", this: favoritesDTO)

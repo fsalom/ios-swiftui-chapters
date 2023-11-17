@@ -8,7 +8,6 @@
 import Foundation
 
 protocol RMCharacterDataSourceProtocol {
-    func getPagination(for page: Int) async throws -> Pagination?
-    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination?
-    func getFavorites() async throws -> [Character]
+    func getPagination(for page: Int) async throws -> PaginationDTO?
+    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> PaginationDTO?
 }

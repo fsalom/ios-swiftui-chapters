@@ -8,9 +8,7 @@
 import Foundation
 
 protocol LocalCharacterDataSourceProtocol {
-    func getPagination(for page: Int) async throws -> Pagination?
-    func getPaginationWhenSearching(this name: String, for page: Int) async throws -> Pagination?
-    func getFavorites() async throws -> [Character]
-    func saveFavorite(_ character: Character)  async throws
-    func removeFavorite(_ character: Character)  async throws
+    func getFavorites() async throws -> [RMCharacterDTO]
+    func saveFavorite(_ character: RMCharacterDTO)  async throws
+    func removeFavorite(_ character: RMCharacterDTO)  async throws
 }
