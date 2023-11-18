@@ -150,7 +150,7 @@ class ListViewModel: ObservableObject, ListViewModelProtocol {
         page = 1
     }
 
-    func handle(this error: Error) async {
+    func handle(this error: Error) {
         DispatchQueue.main.async {
             self.hasOcurredAnError = true
         }
