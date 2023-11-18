@@ -11,7 +11,7 @@
 		C1510BF32B04D31B00C2790F /* LocalManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BF22B04D31B00C2790F /* LocalManagerProtocol.swift */; };
 		C1510BF72B04D36600C2790F /* RemoteManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BF62B04D36600C2790F /* RemoteManagerProtocol.swift */; };
 		C1510BFA2B04D3EC00C2790F /* CharacterRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510BF92B04D3EC00C2790F /* CharacterRepositoryProtocol.swift */; };
-		C1510C3C2B077BAF00C2790F /* PaginationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510C3B2B077BAF00C2790F /* PaginationMapper.swift */; };
+		C1510C3C2B077BAF00C2790F /* CharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1510C3B2B077BAF00C2790F /* CharacterMapper.swift */; };
 		C179CEFD2A49D0C5007BA0FB /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C179CEFC2A49D0C5007BA0FB /* Localizable.swift */; };
 		C179CEFE2A49D2E9007BA0FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C179CF002A49D2E9007BA0FB /* Localizable.strings */; };
 		C1D6C72B2A3B584700780F56 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D6C72A2A3B584700780F56 /* App.swift */; };
@@ -75,7 +75,7 @@
 		C1510BF22B04D31B00C2790F /* LocalManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManagerProtocol.swift; sourceTree = "<group>"; };
 		C1510BF62B04D36600C2790F /* RemoteManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteManagerProtocol.swift; sourceTree = "<group>"; };
 		C1510BF92B04D3EC00C2790F /* CharacterRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryProtocol.swift; sourceTree = "<group>"; };
-		C1510C3B2B077BAF00C2790F /* PaginationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationMapper.swift; sourceTree = "<group>"; };
+		C1510C3B2B077BAF00C2790F /* CharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMapper.swift; sourceTree = "<group>"; };
 		C179CEFC2A49D0C5007BA0FB /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		C179CEFF2A49D2E9007BA0FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1D6C7272A3B584700780F56 /* RudoUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RudoUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,7 +227,7 @@
 		C1510C3A2B077B9200C2790F /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
-				C1510C3B2B077BAF00C2790F /* PaginationMapper.swift */,
+				C1510C3B2B077BAF00C2790F /* CharacterMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -654,7 +654,7 @@
 				C1D6C78A2A3C7C4900780F56 /* DetailCharacterBuilder.swift in Sources */,
 				C1D6C77B2A3B8F9E00780F56 /* ListView.swift in Sources */,
 				C1D6C7902A3C7FB400780F56 /* SplashView.swift in Sources */,
-				C1510C3C2B077BAF00C2790F /* PaginationMapper.swift in Sources */,
+				C1510C3C2B077BAF00C2790F /* CharacterMapper.swift in Sources */,
 				C1DDF7062A4C76FC0031BFE7 /* LocalCacheDataSource.swift in Sources */,
 				C1D6C7862A3C7C2800780F56 /* DetailCharacterViewModel.swift in Sources */,
 				C1D6C7702A3B5AB800780F56 /* RMCharacterDTO.swift in Sources */,
