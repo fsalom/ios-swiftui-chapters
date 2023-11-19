@@ -316,7 +316,6 @@
 			children = (
 				C1D6C75F2A3B58ED00780F56 /* DataSource */,
 				C1D6C7732A3B694700780F56 /* Repositories */,
-				C1D6C75E2A3B58E200780F56 /* CoreData */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -397,6 +396,7 @@
 		C1D6C7692A3B5A3200780F56 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				C1D6C75E2A3B58E200780F56 /* CoreData */,
 				C1510BF42B04D33A00C2790F /* NetworkManager */,
 				C1510BF02B04D2FC00C2790F /* LocalManager */,
 			);
